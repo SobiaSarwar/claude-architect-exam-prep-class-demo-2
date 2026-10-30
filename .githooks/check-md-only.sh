@@ -1,11 +1,11 @@
 #!/bin/sh
 # Reads file paths (one per line) on stdin; fails if any is not allowed.
-# Allowed: *.md, *.docx, .gitignore, LICENSE, .githooks/*, .github/workflows/*.yml
+# Allowed: *.md, .gitignore, LICENSE, .githooks/*, .github/workflows/*.yml
 bad=0
 while IFS= read -r f; do
   [ -z "$f" ] && continue
   case "$f" in
-    *.md|*.docx|.gitignore|.gitattributes|LICENSE|.githooks/*|.github/workflows/*.yml) ;;
+    *.md|.gitignore|.gitattributes|LICENSE|.githooks/*|.github/workflows/*.yml) ;;
     *) echo "Not allowed (markdown only): $f"; bad=1 ;;
   esac
 done

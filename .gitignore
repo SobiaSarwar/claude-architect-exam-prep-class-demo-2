@@ -2,6 +2,7 @@
 *
 !*/
 !*.md
+!*.docx
 !.gitignore
 !LICENSE
 !.gitattributes

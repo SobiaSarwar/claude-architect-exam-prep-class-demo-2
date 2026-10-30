@@ -1,0 +1,9 @@
+# Markdown-only repo: ignore everything except directories and allowed files
+*
+!*/
+!*.md
+!.gitignore
+!LICENSE
+!.gitattributes
+!.githooks/*
+!.github/workflows/*.yml

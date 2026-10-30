@@ -1,0 +1,13 @@
+name: Markdown only
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail on non-markdown files
+        run: git ls-files | sh .githooks/check-md-only.sh
